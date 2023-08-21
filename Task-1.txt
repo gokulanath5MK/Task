@@ -1,0 +1,50 @@
+**HTTP/1.1: The Workhorse of the Web**
+--------------------------------------
+
+HTTP/1.1, the predecessor of HTTP/2, has been the backbone of the World Wide Web for over a decade. It introduced several fundamental concepts that are still in use today. However, as web technologies evolved and user expectations for faster and more interactive experiences increased, HTTP/1.1 started to exhibit limitations.
+
+1. **Connection Limitation**: One of the significant drawbacks of HTTP/1.1 is its tendency to open multiple connections to fetch resources. Each connection carries a certain overhead, including DNS resolution, TCP handshake, and TLS negotiation. This practice not only consumes more server resources but also leads to head-of-line blocking, where a delayed resource blocks subsequent resources from loading.
+
+2. **Header Overhead**: In HTTP/1.1, headers are sent with each request and response, which results in duplicated information being transmitted. This overhead becomes substantial when dealing with numerous requests.
+
+3. **No Prioritization**: HTTP/1.1 treats all requests as equally important, irrespective of their significance to the user's experience. This lack of prioritization hampers the loading of critical resources, leading to slower page load times.
+
+**HTTP/2: Addressing the Limitations**
+--------------------------------------
+
+To overcome the shortcomings of HTTP/1.1, the Internet Engineering Task Force (IETF) introduced HTTP/2 in 2015. HTTP/2 aimed to improve efficiency, reduce latency, and enhance the overall web experience. Let's explore some of the key features that differentiate HTTP/2 from its predecessor:
+
+1. **Multiplexing**: HTTP/2 introduced multiplexing, allowing multiple requests and responses to be multiplexed over a single connection. This means that multiple resources can be fetched simultaneously, eliminating the head-of-line blocking issue.
+
+2. **Binary Protocol**: Unlike the plain text format of HTTP/1.1, HTTP/2 uses a binary protocol for more efficient data transmission. This reduces parsing overhead and makes the protocol more compact.
+
+3. **Header Compression**: HTTP/2 uses header compression techniques to significantly reduce the overhead associated with headers. This minimizes the duplication of information, enhancing the efficiency of data transmission.
+
+4. **Server Push**: One of the most significant enhancements in HTTP/2 is server push. This feature allows servers to proactively send resources to the client before they are requested. This can improve page load times by eliminating the need for the client to send multiple requests for resources that the server knows will be needed.
+
+5. **Stream Prioritization**: HTTP/2 introduces the concept of stream prioritization, where resources can be assigned different priority levels. This ensures that critical resources are fetched and rendered before less important ones, leading to a better user experience.
+
+
+
+_________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
+**Objects in JavaScript**
+--------------------------
+
+At its core, JavaScript is an object-oriented language, and objects are its fundamental building blocks. Objects can be thought of as entities that encapsulate both data (properties) and functionality (methods). They allow developers to model real-world concepts, structures, and interactions in a meaningful way.
+
+**Internal Representation of Objects**
+--------------------------------------
+
+1. **Properties**: Properties are key-value pairs that define the characteristics of an object. They can be primitive values, other objects, or even functions. Properties are accessed using dot notation or bracket notation.
+
+2. **Methods**: Methods are functions that are associated with objects. They represent the actions or behaviors that an object can perform. Just like properties, methods can be added to an object and accessed using dot notation.
+
+3. **Prototypes**: Prototypes are a central feature of JavaScript's object-oriented nature. Every object in JavaScript has an associated prototype, which is another object that serves as a fallback source for properties and methods. This forms the basis of the prototype-based inheritance model.
+
+4. **Prototype Chain**: The prototype chain is a hierarchical structure that links objects through their prototypes. When a property or method is accessed on an object, JavaScript looks up the chain to find the property/method in the object's prototype and its prototype's prototype, and so on, until it reaches the top of the chain.
+
+_________________________________________________________________________________________________________________________________________________________________________
